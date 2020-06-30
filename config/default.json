@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://admin-mourad:Test123@cluster0-qh4yl.mongodb.net/phoneDB?retryWrites=true&w=majority",
+    "jwtSecret" : "This our project for phones..."
+}
