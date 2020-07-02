@@ -15,6 +15,16 @@ const config = require('config')
 const gravatar = require('gravatar')
 
 
+
+
+
+
+
+
+
+
+
+
 // @route  /register
 //@desc   Get the user Data
 // @access  Public
@@ -109,6 +119,32 @@ res.status(500).send('Server is out')
 }
 })
 
+
+
+// @route  /users
+//@desc   Get All of the Users 
+// @access  Private
+
+
+router.get('/' , async(req,res)=> {
+
+
+    try {
+
+ const users =   await User.find() 
+
+res.json(users)
+        
+    } catch (err) {
+        console.error(err);
+res.status(500).send('Server is out')
+        
+    }
+
+
+
+
+})
 
 
 
